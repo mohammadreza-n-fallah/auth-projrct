@@ -1,7 +1,7 @@
 const {validationResult}=require("express-validator")
 const User=require("./../models/user")
 
-module.exports=class {
+module.exports= class {
     constructor(){
        this.User=User;
     }
@@ -18,11 +18,10 @@ module.exports=class {
             return false;
         }
         return true;
-
     }
 
     validate(req,res,next){
-        if(!this.validationBody(req,res)){
+        if(this.validationBody(req,res) == false){
             return;
         }
         next();

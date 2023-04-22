@@ -11,7 +11,7 @@ module.exports = new (class {
         .not()
         .isEmpty()
         .withMessage("name is incorrect"),
-      check("oassword")
+      check("password")
         .not()
         .isEmpty()
         .withMessage("password is incorrect"),
