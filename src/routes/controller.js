@@ -21,7 +21,7 @@ module.exports= class {
     }
 
     validate(req,res,next){
-        if(this.validationBody(req,res) == false){
+        if(!this.validationBody(req,res)){
             return;
         }
         next();
