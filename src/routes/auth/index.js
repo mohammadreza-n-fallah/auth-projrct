@@ -7,14 +7,14 @@ const validator=require("./validator")
 router.post(
     "/register",
     validator.registerValidator(),
-    controller.validate,
+    controller.validate.bind(controller),
     controller.register.bind(controller)
 );
 
 router.post(
     "/login",
     validator.loginValidator(),
-    controller.validate,
+    controller.validate.bind(controller),
     controller.login.bind(controller)
 );
 
