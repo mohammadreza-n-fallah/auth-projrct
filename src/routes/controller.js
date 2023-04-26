@@ -3,7 +3,7 @@ const User=require("./../models/user");
 const autoBind=require("auto-bind")
 
 
-module.exports=class {
+module.exports= class {
     constructor(){
         autoBind(this)
        this.User=User;
@@ -21,7 +21,6 @@ module.exports=class {
             return false;
         }
         return true;
-
     }
 
     validate(req,res,next){
