@@ -1,8 +1,11 @@
-const {validationResult}=require("express-validator")
-const User=require("./../models/user")
+const {validationResult}=require("express-validator");
+const User=require("./../models/user");
+const autoBind=require("auto-bind")
+
 
 module.exports=class {
     constructor(){
+        autoBind(this)
        this.User=User;
     }
     validationBody(req,res){
